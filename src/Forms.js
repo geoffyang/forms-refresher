@@ -41,7 +41,7 @@ export default function Forms() {
 
             <div id='level3'>
                 {
-                    showLevel3 === 'showLevel3'
+                    showLevel3 === 'showLevel3' && showLevel2 === 'showLevel2'
                         ? <h3>You've reached the end</h3>
                         : null
                 }
