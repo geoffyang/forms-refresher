@@ -1,9 +1,7 @@
 import { useState } from 'react'
 
-
 export default function Forms() {
 
-    //useState hook
     const [showLevel2, setShowLevel2] = useState("")
     const [showLevel3, setShowLevel3] = useState("")
 
@@ -17,7 +15,7 @@ export default function Forms() {
                     value={showLevel2}
                 >
                     <option value='' disabled>Select Something</option>
-                    <option value="show">Show More Dropdowns</option>
+                    <option value="showLevel2">Show More Dropdowns</option>
                     <option value="dontshow" >Don't show more</option>
                 </select>
             </div>
@@ -25,7 +23,7 @@ export default function Forms() {
 
             <div id='level2'>
                 {
-                    showLevel2 === 'show' ?
+                    showLevel2 === 'showLevel2' ?
                         <>
                             <label>Level 2 Dropdown </label>
                             <select
