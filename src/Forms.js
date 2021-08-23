@@ -4,7 +4,7 @@ export default function Forms() {
 
     const [showLevel2, setShowLevel2] = useState("")
     const [showLevel3, setShowLevel3] = useState("")
-
+    const [checkedState, setCheckedState] = useState(false)
 
     return (
         <form>
@@ -46,6 +46,18 @@ export default function Forms() {
                         : null
                 }
             </div>
+
+            <div>
+                <label>Are you going?</label>
+                <input
+                    type="checkbox"
+                    checked={checkedState}
+                    onChange={() => setCheckedState(prev => !prev)}
+                ></input>
+
+            </div>
+            <h3>{checkedState === true ? "GOING" : "NOT GOING"}</h3>
+
         </form >
     )
 }
